@@ -9,6 +9,10 @@ Discover neighborhood food, small cultural spaces, quiet nature, and local favor
 3. `npm run dev`
 4. Open http://localhost:5173
 
+## Deploy to Netlify
+
+Connect this repository to Netlify and set the site base directory to the repository root. The included `netlify.toml` builds the Vite app in `client`, publishes `client/dist`, and deploys the API as a Netlify Function. No API URL or server process setting is required. Netlify's `/api/*` rewrite sends requests to the function, and the SPA fallback keeps React Router routes working on refresh.
+
 ## Backend API
 
 The Express API listens on port `5000` by default. Set `PORT` to change it and
