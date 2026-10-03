@@ -1,0 +1,150 @@
+.experience-page {
+  padding-top: 8px;
+}
+
+.experience-form {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  max-width: 720px;
+}
+
+.form-step {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.45s ease, margin 0.45s ease;
+  margin-bottom: 0;
+}
+
+.form-step.visible {
+  max-height: 320px;
+  opacity: 1;
+  margin-bottom: 24px;
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.option-chip {
+  border: 2px solid var(--sage);
+  background: transparent;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.option-chip.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #eee4d8;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #fffdf9;
+}
+
+.checkbox-chip input {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+
+.itinerary {
+  margin-top: 40px;
+}
+
+.itinerary-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--sage);
+  animation: drawLine 1.2s ease forwards;
+  transform-origin: top;
+}
+
+@keyframes drawLine {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 28px;
+  animation: fadeUp 0.5s ease both;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -28px;
+  top: 2px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  width: 44px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.step-num {
+  font-family: 'Fraunces', serif;
+}
+
+.step-time {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.step-title {
+  font-size: 1.15rem;
+}
+
+.walk-link {
+  margin-top: 8px;
+  color: var(--sage);
+  font-weight: 600;
+}

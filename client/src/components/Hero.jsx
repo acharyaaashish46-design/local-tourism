@@ -1,0 +1,6 @@
+import { Link } from 'react-router-dom';
+
+export default function Hero() {
+  const browse = () => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  return <section className="hero"><div className="hero-copy"><p className="eyebrow"><span className="eyebrow-dot" />A local's guide to Kathmandu</p><h1>Find the<br /><em>unexpected.</em></h1><p className="hero-tagline">The city is full of stories.<br />Let the good ones find you.</p><div className="hero-actions"><Link to="/experience" className="button button-primary">Plan my day <span aria-hidden="true">↗</span></Link><button type="button" className="button button-quiet" onClick={browse}>Explore the city <span aria-hidden="true">↓</span></button></div><div className="hero-note"><span>MADE WITH LOCAL LOVE</span><span className="hero-note-rule"/><span>KATHMANDU, NEPAL</span></div></div><div className="hero-art"><img src="/pashupatinath.jpg" alt="Golden pagoda temple rising above Kathmandu rooftops"/><div className="hero-photo-shade"/><div className="hero-photo-label"><span className="photo-label-dot"/> THE VALLEY, UP CLOSE</div><div className="hero-photo-caption"><span>01 — 07</span><span>Every lane has a story.</span></div></div><span className="hero-vertical">GO WHERE THE GOOD STORIES ARE</span></section>;
+}
